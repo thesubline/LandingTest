@@ -5,6 +5,31 @@ body, html{
     width: 100%;
 }
 
+input[type=submit]{
+    width: 50%;
+    margin-left: auto;
+    background: rgb(255, 99, 107);
+    border: none;
+    outline: 0;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+input[type=submit]::-moz-focus-inner{
+    border: 0;
+}
+
+input[type=submit]:hover{
+    background: rgb(243, 77, 86);
+}
+
+input[type=submit]:active{
+    font-size: 18px;
+}
+
 h4{
     font-size: 20px;
     font-weight: bold;
@@ -19,13 +44,38 @@ input{
 .header{
     display: flex;
     justify-content: space-around;
-    height: 10vh;
-    padding: 25px;
+    padding: 0 25px;
     align-items: center;
 }
 
     .header img{
         max-width: 200px;
+    }
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 100%;
+    padding: 3px;
+    font-size: 20px;
+    text-align: center;
+}
+    
+    .bannerHidden{
+        background: white;
+        color: white;
+    }
+    
+    .bannerError{
+        background: red;
+        color: white;
+    }
+    
+    .bannerSuccess{
+        background: green;
+        color: white;
     }
 
 .content{

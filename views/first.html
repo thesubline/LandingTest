@@ -11,10 +11,13 @@
             <p>Contact us @ ...</p>
         </div>
 
+        <div class="banner">
+            <p></p>
+        </div>
+
         <div class="content">
             <h1>Your Great Headline</h1>
             <h3>Your intriguing call to action goes here...</h3>
-        
 
             <div class=contentMain>
                 <div class="features">
@@ -34,20 +37,22 @@
                     </div>
                 </div>
                 
-                <form>
+                <form onsubmit="submitForm()">
                     <h2>Sign up now!</h2>
 
                     <label>*Full Name:
-                        <input type="text" required>
+                        <input id="name" type="text" pattern="[A-Za-z ]+" title="No numbers or special characters" required>
                     </label>
 
                     <label>Phone Number:
-                        <input type="text">
+                        <input id="phone" type="text" pattern="[0-9\-\(\) ]+">
                     </label>
 
                     <label>*Email:
-                        <input type="email" required>
+                        <input id="email" type="email" required>
                     </label>
+
+                    <input type="submit" value="Submit">
                 </form>
             </div>
         </div>
@@ -68,5 +73,52 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div>
+
+        <script>
+            let submitForm = ()=>{
+                event.preventDefault();
+
+                let data = {
+                    name: document.querySelector("#name").value,
+                    phone: document.querySelector("#phone").value,
+                    email: document.querySelector("#email").value
+                }
+
+                fetch("/lead", {
+                    method: "post",
+                    headers: {
+                        "Content-Type": "application/json;charset=utf-8"
+                    },
+                    body: JSON.stringify(data)
+                })
+                    .then((response)=>{
+                        if(typeof(response.data) === "string"){
+                            showBanner(response.data, true);
+                        }else{
+                            showBanner("Thanks for signing up.  We will keep you updated with the lastest developments");
+                        }
+                    })
+                    .catch((err)=>{
+                        showBanner("Error: something went wrong and we could not save your information", true);
+                    });
+            }
+
+            let showBanner = (text, isError = false)=>{
+                let banner = document.querySelector(".banner");
+
+                if(isError){
+                    banner.classList = "banner bannerError";
+                }else{
+                    banner.classList = "banner bannerSuccess";
+                }
+
+                banner.children[0].innerText = text;
+
+                setTimeout(()=>{
+                    banner.classList = "banner bannerHidden";
+                    banner.children[0].innerText = "";
+                }, 5000)
+            }
+        </script>
     </body>
 </html>
