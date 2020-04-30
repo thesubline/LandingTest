@@ -4,7 +4,8 @@
   "description": "Series of pages for testing different formats for landing pages",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Lee Morgan",
   "license": "ISC",
