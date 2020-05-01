@@ -3,6 +3,12 @@
 body, html{
     height: 100%;
     width: 100%;
+    font-family: 'Saira', sans-serif;
+}
+
+p{
+    font-size: 18px;
+    line-height: 25px;
 }
 
 input[type=submit]{
@@ -43,13 +49,17 @@ input{
 
 .header{
     display: flex;
-    justify-content: space-around;
-    padding: 0 25px;
+    justify-content: space-between;
+    align-items: center;
     align-items: center;
 }
 
     .header img{
         max-width: 200px;
+    }
+
+    .header p{
+        padding-right: 100px;
     }
 
 .banner{
@@ -58,29 +68,28 @@ input{
     align-items: center;
     height: 20px;
     width: 100%;
-    padding: 3px;
+    padding-bottom: 3px;
     font-size: 20px;
     text-align: center;
+    margin-top: -25px;
+    box-sizing: border-box;
+    color: white;
 }
     
     .bannerHidden{
         background: white;
-        color: white;
     }
     
     .bannerError{
         background: red;
-        color: white;
     }
     
     .bannerSuccess{
         background: green;
-        color: white;
     }
 
 .content{
     display: flex;
-    flex-direction: column;
     align-items: center;
     background: rgb(0, 27, 45);
     color: white;
@@ -91,8 +100,13 @@ input{
 
     .contentMain{
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
+    }
+
+    .contentMain > h1{
+        color: rgb(255, 99, 107);
     }
 
     .features{
@@ -103,6 +117,10 @@ input{
         margin: 15px;
         text-align: justify;
     }
+
+    /* .features > * p{
+        font-size: 16px;
+    } */
 
     form{
         display: flex;
@@ -124,7 +142,6 @@ input{
 .footer{
     display: flex;
     width: 100%;
-    padding: 25px 100px 100px 100px;
     box-sizing: border-box;
 }
 
