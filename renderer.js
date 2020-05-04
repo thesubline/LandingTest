@@ -16,11 +16,11 @@ MongoClient.connect(
 
 module.exports = {
     main: function(req, res){
-        return res.redirect("/pc2igamwg2");
+        return res.redirect("/kitchenrental");
     },
 
-    first: function(req, res){
-        return res.sendFile(`${__dirname}/views/first.html`);
+    kitchenRental: function(req, res){
+        return res.sendFile(`${__dirname}/views/kitchenRental.html`);
     },
 
     addLead: function(req, res){

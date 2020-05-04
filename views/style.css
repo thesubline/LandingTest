@@ -56,6 +56,7 @@ input{
 
     .header img{
         max-width: 200px;
+        margin-left: 50px;
     }
 
     .header p{
@@ -68,7 +69,7 @@ input{
     align-items: center;
     height: 20px;
     width: 100%;
-    padding-bottom: 3px;
+    padding: 3px 0;
     font-size: 20px;
     text-align: center;
     margin-top: -25px;
@@ -91,11 +92,12 @@ input{
 .content{
     display: flex;
     align-items: center;
+    box-sizing: border-box;
     background: rgb(0, 27, 45);
     color: white;
     box-sizing: border-box;
     width: 100%;
-    padding: 25px 100px 10px 100px;
+    padding: 50px 100px 50px 100px;
 }
 
     .contentMain{
@@ -116,11 +118,9 @@ input{
     .features > *{
         margin: 15px;
         text-align: justify;
+        font-size: 25px;
+        line-height: 45px;
     }
-
-    /* .features > * p{
-        font-size: 16px;
-    } */
 
     form{
         display: flex;
@@ -147,7 +147,18 @@ input{
 
     .footer > *{
         display: flex;
+        width: 30%;
         flex-direction: column;
         margin: 25px;
         text-align: justify;
+        padding: 25px;
+    }
+
+    .footer h4{
+        text-align: center;
+    }
+
+    .footer p{
+        font-size: 20px;
+        line-height: 35px;
     }
