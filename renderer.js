@@ -35,6 +35,10 @@ module.exports = {
         return res.sendFile(`${__dirname}/views/inventoryManagement.html`);
     },
 
+    kytchnDelivery: function(req, res){
+        return res.sendFile(`${__dirname}/views/kytchnDelivery.html`);
+    },
+
     addLead: function(req, res){
         Lead.insertOne(req.body)
             .then((response)=>{
