@@ -69,7 +69,7 @@
                     name: document.querySelector("#name").value,
                     phone: document.querySelector("#phone").value,
                     email: document.querySelector("#email").value,
-                    page: window.location.pathname.replace("/", "")
+                    page: window.location.pathname.replace("/", "").toLowerCase()
                 }
 
                 fetch("/lead", {
