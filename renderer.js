@@ -31,6 +31,10 @@ module.exports = {
         return res.sendFile(`${__dirname}/views/kitchenCooks.html`);
     },
 
+    inventoryManagement: function(req, res){
+        return res.sendFile(`${__dirname}/views/inventoryManagement.html`);
+    },
+
     addLead: function(req, res){
         Lead.insertOne(req.body)
             .then((response)=>{
