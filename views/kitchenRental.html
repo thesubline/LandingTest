@@ -69,7 +69,8 @@
                 let data = {
                     name: document.querySelector("#name").value,
                     phone: document.querySelector("#phone").value,
-                    email: document.querySelector("#email").value
+                    email: document.querySelector("#email").value,
+                    page: window.location.pathname.replace("/", "")
                 }
 
                 fetch("/lead", {
