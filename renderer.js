@@ -23,6 +23,10 @@ module.exports = {
         return res.sendFile(`${__dirname}/views/kitchenRental.html`);
     },
 
+    kitchenCo: function(req, res){
+        return res.sendFile(`${__dirname}/views/kitchenCo.html`);
+    },
+
     addLead: function(req, res){
         Lead.insertOne(req.body)
             .then((response)=>{
