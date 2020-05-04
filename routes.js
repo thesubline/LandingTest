@@ -7,6 +7,7 @@ module.exports = function(app){
     app.get("/kitchencooks", renderer.kitchenCooks);
     app.get("/inventorymanagement", renderer.inventoryManagement);
     app.get("/kytchndelivery", renderer.kytchnDelivery);
+    app.get("/kytchnorder", renderer.kytchnOrder);
     
     app.post("/lead", renderer.addLead);
 }
