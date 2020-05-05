@@ -16,7 +16,7 @@ MongoClient.connect(
 
 module.exports = {
     main: function(req, res){
-        return res.redirect("/rentyourkitchen");
+        return res.sendFile(`${__dirname}/views/home.html`);
     },
 
     rentYourKitchen: function(req, res){
