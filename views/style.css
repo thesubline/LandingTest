@@ -169,6 +169,10 @@ input{
     background-image: url("./images/rentYourKitchen.jpg");
 }
 
+#kitchenCo{
+    background-image: url("./images/kitchenCo.jpg");
+}
+
 #inventoryManagementImg{
     background-image: url("./images/inventoryManagement.jpg");
 }
