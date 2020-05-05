@@ -4,11 +4,13 @@ body, html{
     height: 100%;
     width: 100%;
     font-family: 'Saira', sans-serif;
+    background-size: 100%;
 }
 
 p{
     font-size: 18px;
     line-height: 25px;
+    color: white;
 }
 
 input[type=submit]{
@@ -94,10 +96,11 @@ input{
     align-items: center;
     box-sizing: border-box;
     color: white;
+    background: rgba(0, 27, 45, 0.75);
     box-sizing: border-box;
     width: 100%;
     padding: 50px 100px 50px 100px;
-    background-size: 100%;
+    
 }
 
     .contentMain{
@@ -163,9 +166,14 @@ input{
     .footer p{
         font-size: 20px;
         line-height: 35px;
+        color: white;
     }
 
-#rentYourKitchen, #kitchenRental{
+#rentYourKitchen{
+    background-image: url("./images/rentYourKitchen2.jpg");
+}
+
+#kitchenRental{
     background-image: url("./images/rentYourKitchen.jpg");
 }
 
