@@ -177,6 +177,10 @@ input{
     background-image: url("./images/kitchenCooks.jpg");
 }
 
+#kytchnDelivery{
+    background-image: url("./images/kytchnDelivery.jpg");
+}
+
 #inventoryManagementImg{
     background-image: url("./images/inventoryManagement.jpg");
 }

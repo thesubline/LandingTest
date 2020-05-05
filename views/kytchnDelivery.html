@@ -16,7 +16,7 @@
             <p></p>
         </div>
 
-        <div class="content">
+        <div id="kytchnDelivery" class="content">
             <div class=contentMain>
                 <h1>A delivery service that delivers on your needs</h1>
 
@@ -38,6 +38,10 @@
 
                 <label>*Email:
                     <input id="email" type="email" required>
+                </label>
+
+                <label>Zip Code:
+                    <input id="zip" type="text" pattern="[0-9]+" title="Numbers only">
                 </label>
 
                 <input type="submit" value="Submit">
@@ -69,6 +73,7 @@
                     name: document.querySelector("#name").value,
                     phone: document.querySelector("#phone").value,
                     email: document.querySelector("#email").value,
+                    zip: document.querySelector("#zip").value,
                     page: window.location.pathname.replace("/", "").toLowerCase()
                 }
 
