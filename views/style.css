@@ -173,6 +173,10 @@ input{
     background-image: url("./images/kitchenCo.jpg");
 }
 
+#kitchenCooks{
+    background-image: url("./images/kitchenCooks.jpg");
+}
+
 #inventoryManagementImg{
     background-image: url("./images/inventoryManagement.jpg");
 }
