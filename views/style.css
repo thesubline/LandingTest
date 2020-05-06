@@ -4,13 +4,11 @@ body, html{
     height: 100%;
     width: 100%;
     font-family: 'Saira', sans-serif;
-    background-size: 100%;
 }
 
 p{
     font-size: 18px;
     line-height: 25px;
-    color: white;
 }
 
 input[type=submit]{
@@ -63,6 +61,7 @@ input{
 
     .header p{
         padding-right: 100px;
+        color: rgb(255, 99, 107);
     }
 
 .banner{
@@ -166,33 +165,39 @@ input{
     .footer p{
         font-size: 20px;
         line-height: 35px;
-        color: white;
     }
 
 #rentYourKitchen{
-    background-image: url("./images/rentYourKitchen2.jpg");
+    background-image: url("./images/rentYourKitchen.jpg");
+    background-size: 100%;
 }
 
 #kitchenRental{
     background-image: url("./images/rentYourKitchen.jpg");
+    background-size: 100%;
 }
 
 #kitchenCo{
     background-image: url("./images/kitchenCo.jpg");
+    background-size: 100%;
 }
 
 #kitchenCooks{
     background-image: url("./images/kitchenCooks.jpg");
+    background-size: 100%;
 }
 
 #inventoryManagement{
     background-image: url("./images/inventoryManagement.jpg");
+    background-size: 100%;
 }
 
 #kytchnDelivery{
     background-image: url("./images/kytchnDelivery.jpg");
+    background-size: 100%;
 }
 
 #kytchnOrder{
     background-image: url("./images/kytchnOrder.jpg");
+    background-size: 100%;
 }

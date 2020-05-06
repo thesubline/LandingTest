@@ -7,45 +7,47 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <div class="header">
-            <img src="./images/pinklogo.png" alt="Logo">
-            <p>Contact us: info@kytchns.com</p>
-        </div>
-
-        <div class="banner">
-            <p></p>
-        </div>
-
-        <div id="kytchnDelivery" class="content">
-            <div class=contentMain>
-                <h1>A delivery service that delivers on your needs</h1>
-
-                <div class="features">
-                    <p>Small businesses which lack the leverage to negotiate third-party fees or the resources to adapt their facilities are made most vulnerable by delivery’s growth. As delivery-service apps capture a growing percentage of your food sales, they may also be hurting your restaurants’ bottom line. </p>
-                </div>
+        <div id="kytchnDelivery">
+            <div class="header">
+                <img src="./images/pinklogo.png" alt="Logo">
+                <p>Contact us: info@kytchns.com</p>
             </div>
-                
-            <form onsubmit="submitForm()">
-                <h2>Sign up now!</h2>
 
-                <label>*Full Name:
-                    <input id="name" type="text" pattern="[A-Za-z ]+" title="No numbers or special characters" required>
-                </label>
+            <div class="banner">
+                <p></p>
+            </div>
 
-                <label>Phone Number:
-                    <input id="phone" type="text" pattern="[0-9\-\(\) ]+">
-                </label>
+            <div class="content">
+                <div class=contentMain>
+                    <h1>A delivery service that delivers on your needs</h1>
 
-                <label>*Email:
-                    <input id="email" type="email" required>
-                </label>
+                    <div class="features">
+                        <p>Small businesses which lack the leverage to negotiate third-party fees or the resources to adapt their facilities are made most vulnerable by delivery’s growth. As delivery-service apps capture a growing percentage of your food sales, they may also be hurting your restaurants’ bottom line. </p>
+                    </div>
+                </div>
+                    
+                <form onsubmit="submitForm()">
+                    <h2>Sign up now!</h2>
 
-                <label>Zip Code:
-                    <input id="zip" type="text" pattern="[0-9]+" title="Numbers only">
-                </label>
+                    <label>*Full Name:
+                        <input id="name" type="text" pattern="[A-Za-z ]+" title="No numbers or special characters" required>
+                    </label>
 
-                <input type="submit" value="Submit">
-            </form>
+                    <label>Phone Number:
+                        <input id="phone" type="text" pattern="[0-9\-\(\) ]+">
+                    </label>
+
+                    <label>*Email:
+                        <input id="email" type="email" required>
+                    </label>
+
+                    <label>Zip Code:
+                        <input id="zip" type="text" pattern="[0-9]+" title="Numbers only">
+                    </label>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </div>
 
         <div class="footer">
