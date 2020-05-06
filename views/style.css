@@ -60,6 +60,7 @@ input{
 
     .header p{
         padding-right: 100px;
+        color: rgb(255, 99, 107);
     }
 
 .banner{
@@ -93,10 +94,11 @@ input{
     align-items: center;
     box-sizing: border-box;
     color: white;
+    background: rgba(0, 27, 45, 0.75);
     box-sizing: border-box;
     width: 100%;
     padding: 50px 100px 50px 100px;
-    background-size: 100%;
+    
 }
 
     .contentMain{
@@ -164,26 +166,37 @@ input{
         line-height: 35px;
     }
 
-#rentYourKitchen, #kitchenRental{
+#rentYourKitchen{
     background-image: url("./images/rentYourKitchen.jpg");
+    background-size: 100%;
+}
+
+#kitchenRental{
+    background-image: url("./images/rentYourKitchen.jpg");
+    background-size: 100%;
 }
 
 #kitchenCo{
     background-image: url("./images/kitchenCo.jpg");
+    background-size: 100%;
 }
 
 #kitchenCooks{
     background-image: url("./images/kitchenCooks.jpg");
+    background-size: 100%;
 }
 
 #inventoryManagement{
     background-image: url("./images/inventoryManagement.jpg");
+    background-size: 100%;
 }
 
 #kytchnDelivery{
     background-image: url("./images/kytchnDelivery.jpg");
+    background-size: 100%;
 }
 
 #kytchnOrder{
     background-image: url("./images/kytchnOrder.jpg");
+    background-size: 100%;
 }

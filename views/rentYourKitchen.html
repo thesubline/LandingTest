@@ -7,45 +7,47 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <div class="header">
-            <img src="./images/pinklogo.png" alt="Logo">
-            <p>Contact us: info@kytchns.com</p>
-        </div>
-
-        <div class="banner">
-            <p></p>
-        </div>
-
-        <div id="rentYourKitchen" class="content">
-            <div class=contentMain>
-                <h1>There are never too many cooks in the kitchen</h1>
-
-                <div class="features">
-                    <p>Building your own commercial kitchen is expensive and time-consuming, not to mention a huge capital investment. It’s a shame to leave your commercial kitchen space sitting idle when it could be making money. You can use our Kytchn marketplace to list your commercial kitchen space and find businesses to rent out your space during idle hours.</p>
-                </div>
+        <div id="rentYourKitchen">
+            <div class="header">
+                <img src="./images/pinklogo.png" alt="Logo">
+                <p>Contact us: info@kytchns.com</p>
             </div>
-                
-            <form onsubmit="submitForm()">
-                <h2>Sign up now!</h2>
 
-                <label>*Full Name:
-                    <input id="name" type="text" pattern="[A-Za-z ]+" title="No numbers or special characters" required>
-                </label>
+            <div class="banner">
+                <p></p>
+            </div>
 
-                <label>Phone Number:
-                    <input id="phone" type="text" pattern="[0-9\-\(\) ]+">
-                </label>
+            <div class="content">
+                <div class=contentMain>
+                    <h1>There are never too many cooks in the kitchen</h1>
 
-                <label>*Email:
-                    <input id="email" type="email" required>
-                </label>
+                    <div class="features">
+                        <p>Building your own commercial kitchen is expensive and time-consuming, not to mention a huge capital investment. It’s a shame to leave your commercial kitchen space sitting idle when it could be making money. You can use our Kytchn marketplace to list your commercial kitchen space and find businesses to rent out your space during idle hours.</p>
+                    </div>
+                </div>
+                    
+                <form onsubmit="submitForm()">
+                    <h2>Sign up now!</h2>
 
-                <label>Zip Code:
-                    <input id="zip" type="text" pattern="[0-9]+" title="Numbers only">
-                </label>
+                    <label>*Full Name:
+                        <input id="name" type="text" pattern="[A-Za-z ]+" title="No numbers or special characters" required>
+                    </label>
 
-                <input type="submit" value="Submit">
-            </form>
+                    <label>Phone Number:
+                        <input id="phone" type="text" pattern="[0-9\-\(\) ]+">
+                    </label>
+
+                    <label>*Email:
+                        <input id="email" type="email" required>
+                    </label>
+
+                    <label>Zip Code:
+                        <input id="zip" type="text" pattern="[0-9]+" title="Numbers only">
+                    </label>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </div>
 
         <div class="footer">
@@ -109,6 +111,7 @@
 
                 setTimeout(()=>{
                     banner.classList = "banner bannerHidden";
+                    banner.style.background = "none";
                     banner.children[0].innerText = "";
                 }, 5000)
             }
