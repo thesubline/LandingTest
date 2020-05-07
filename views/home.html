@@ -9,8 +9,37 @@
     <body>
         <div class="header">
             <img src="./images/pinklogo.png" alt="Logo">
-            <h1>REGISTER YOUR INTEREST</h1>
             <p>Contact us: info@kytchns.com</p>
+        </div>
+
+        <div class="center">
+            <div class="centerLeft">
+                <h1>OUR COMPANY</h1>
+
+                <p>Kytchns was formed to help small business restaurants survive and recover in a post COVID-19 world. Small business restaurants already face razor-thin margins, concentrated competition, and high capital costs. Kytchns helps provide small business restaurants with the tools and services needed to navigate a post-pandemic landscape and return to profitability as soon as possible.</p>
+            </div>
+
+            <form onsubmit="submitForm()">
+                <h2>Sign up now!</h2>
+
+                <label>*Full Name:
+                    <input id="name" type="text" pattern="[A-Za-z ]+" title="No numbers or special characters" required>
+                </label>
+
+                <label>Phone Number:
+                    <input id="phone" type="text" pattern="[0-9\-\(\) ]+">
+                </label>
+
+                <label>*Email:
+                    <input id="email" type="email" required>
+                </label>
+
+                <label>Zip Code:
+                    <input id="zip" type="text" pattern="[0-9]+" title="Numbers only">
+                </label>
+
+                <input type="submit" value="Submit">
+            </form>
         </div>
 
         <div class="content">
@@ -18,28 +47,28 @@
                 <div class="myImage">
                     <img src="./images/rentYourKitchenHome.jpg">
                 </div>
-                <p>Rent Your Kitchen</p>
+                <p>Lease Your Kitchen Space</p>
             </a>
 
             <a href="/kitchenrental">
                 <div class="myImage">
                     <img src="./images/rentYourKitchenHome.jpg">
                 </div>
-                <p>Rent Your Kitchen (again)</p>
+                <p>Rent a Commercial Kitchen</p>
             </a>
 
             <a href="/kitchenco">
                 <div class="myImage">
                     <img src="./images/kitchenCoHome.jpg">
                 </div>
-                <p>Kitchen Coalition</p>
+                <p>Shared Commercial Kitchens</p>
             </a>
 
             <a href="/kitchencooks">
                 <div class="myImage">
                     <img src="./images/kitchenCooksHome.jpg">
                 </div>
-                <p>Kitchen Cooks</p>
+                <p>On Demand Sous Chef</p>
             </a>
 
             <a href="/inventorymanagement">
@@ -53,15 +82,65 @@
                 <div class="myImage">
                     <img src="./images/kytchnDeliveryHome.jpg">
                 </div>
-                <p>Kytchn Delivery</p>
+                <p>Neighborhood Delivery Coalition</p>
             </a>
 
             <a href="/kytchnorder">
                 <div class="myImage">
                     <img src="./images/kytchnOrderHome.jpg">
                 </div>
-                <p>Kytchn Order</p>
+                <p>Shared Inventory Ordering</p>
             </a>
         </div>
+
+        <script>
+            let submitForm = ()=>{
+                event.preventDefault();
+
+                let data = {
+                    name: document.querySelector("#name").value,
+                    phone: document.querySelector("#phone").value,
+                    email: document.querySelector("#email").value,
+                    zip: document.querySelector("#zip").value,
+                    page: window.location.pathname.replace("/", "")
+                }
+
+                fetch("/lead", {
+                    method: "post",
+                    headers: {
+                        "Content-Type": "application/json;charset=utf-8"
+                    },
+                    body: JSON.stringify(data)
+                })
+                    .then((response)=>{
+                        if(typeof(response.data) === "string"){
+                            showBanner(response.data, true);
+                        }else{
+                            showBanner("Thanks for signing up.  We will keep you updated with the lastest developments");
+                        }
+                    })
+                    .catch((err)=>{
+                        showBanner("Error: something went wrong and we could not save your information", true);
+                    });
+            }
+
+            let showBanner = (text, isError = false)=>{
+                let banner = document.querySelector(".banner");
+
+                if(isError){
+                    banner.classList = "banner bannerError";
+                }else{
+                    banner.classList = "banner bannerSuccess";
+                }
+
+                banner.children[0].innerText = text;
+
+                setTimeout(()=>{
+                    banner.classList = "banner bannerHidden";
+                    banner.style.background = "none";
+                    banner.children[0].innerText = "";
+                }, 5000)
+            }
+        </script>
     </body>
 </html>
