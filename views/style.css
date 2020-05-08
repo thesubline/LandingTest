@@ -144,17 +144,23 @@ input{
 
 .footer{
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     width: 100%;
     box-sizing: border-box;
 }
 
     .footer > *{
         display: flex;
-        width: 30%;
+        justify-content: center;
+        width: 20%;
         flex-direction: column;
         margin: 25px;
         text-align: justify;
-        padding: 25px;
+        padding: 100px;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: -5px 5px 200px rgb(0, 27, 45);
     }
 
     .footer h4{
