@@ -142,6 +142,30 @@ input{
         margin: 10px;
     }
 
+    .submitted{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 50px;
+        max-width: 250px;
+        min-height: 400px;
+        color: rgb(255, 99, 107);
+        justify-content: center;
+    }
+
+        .submitted h3{
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .submitted p{
+            font-size: 25px;
+            line-height: 50px;
+            text-align: center;
+        }
+
 .footer{
     display: flex;
     justify-content: space-around;

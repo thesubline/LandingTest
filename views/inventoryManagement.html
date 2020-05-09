@@ -91,7 +91,8 @@
                     phone: document.querySelector("#phone").value,
                     email: document.querySelector("#email").value,
                     zip: document.querySelector("#zip").value,
-                    page: window.location.pathname.replace("/", "")
+                    page: window.location.pathname.replace("/", ""),
+                    date: new Date()
                 }
 
                 fetch("/lead", {
@@ -105,7 +106,19 @@
                         if(typeof(response.data) === "string"){
                             showBanner(response.data, true);
                         }else{
-                            showBanner("Thanks for signing up.  We will keep you updated with the lastest developments");
+                            document.querySelector("form").style.display = "none";
+
+                            let submitted = document.createElement("div");
+                            submitted.classList = "submitted";
+                            document.querySelector(".content").appendChild(submitted);
+
+                            let title = document.createElement("h3");
+                            title.innerText = "Thanks for signing up!";
+                            submitted.appendChild(title);
+
+                            let p = document.createElement("p");
+                            p.innerText = "We will keep you up to date with all of the latest information about Kytchns!";
+                            submitted.appendChild(p);
                         }
                     })
                     .catch((err)=>{
