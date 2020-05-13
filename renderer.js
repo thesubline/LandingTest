@@ -25,7 +25,7 @@ module.exports = {
             ip: req.header("x-forwarded-for") || req.connection.remoteAddress,
             dateTime: new Date()
         }
-        Visitor.create(visitory).catch(()=>{});
+        Visitor.create(visitor).catch(()=>{});
         return res.sendFile(`${__dirname}/views/rentYourKitchen.html`);
     },
 
