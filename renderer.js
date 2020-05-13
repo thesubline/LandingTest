@@ -1,6 +1,6 @@
 const MongoClient = require("mongodb").MongoClient;
 
-let Lead;
+let Lead, Visitor;
 
 MongoClient.connect(
     process.env.SUBLINE_DB,
@@ -11,6 +11,7 @@ MongoClient.connect(
     (err, client)=>{
         let db = client.db("business");
         Lead = db.collection("leads");
+        Visitor = db.collection("visitors");
     }
 )
 
@@ -20,7 +21,11 @@ module.exports = {
     },
 
     rentYourKitchen: function(req, res){
-        console.log(req.header("x-forwarded-for") || req.connection.remoteAddress);
+        let visitor = {
+            ip: req.header("x-forwarded-for") || req.connection.remoteAddress,
+            dateTime: new Date()
+        }
+        Visitor.create(visitory).catch(()=>{});
         return res.sendFile(`${__dirname}/views/rentYourKitchen.html`);
     },
 
