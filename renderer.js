@@ -20,6 +20,7 @@ module.exports = {
     },
 
     rentYourKitchen: function(req, res){
+        console.log(req.header("x-forwarded-for") || req.connection.remoteAddress);
         return res.sendFile(`${__dirname}/views/rentYourKitchen.html`);
     },
 
